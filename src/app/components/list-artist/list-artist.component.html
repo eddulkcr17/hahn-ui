@@ -3,11 +3,17 @@
 </div>
 
 <div class="container">
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z5">
+
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input autocomplete="off">
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
 
     <ng-container matColumnDef="artistName">
-      <th mat-header-cell *matHeaderCellDef> Artist Name </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Artist Name </th>
       <td mat-cell *matCellDef="let element"> {{element.artistName}} </td>
     </ng-container>
 
@@ -17,7 +23,7 @@
     </ng-container>
 
     <ng-container matColumnDef="publication">
-      <th mat-header-cell *matHeaderCellDef> publication </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> publication </th>
       <td mat-cell *matCellDef="let element"> {{element.publication}} </td>
     </ng-container>
 
