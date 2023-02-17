@@ -29,3 +29,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### main objetive
 Create the Artist Web API consuming UI that I created for the fullstack developer app
 
+#### Structure
+the app will have the next structure:
+Components  
+      add-edit-artist
+      list-artist
+      view-artist
+Interfaces
+      artist
+Services
+      artist

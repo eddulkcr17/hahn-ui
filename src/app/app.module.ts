@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddEditArtistComponent } from './components/add-edit-artist/add-edit-artist.component';
+import { ListArtistComponent } from './components/list-artist/list-artist.component';
+import { ViewArtistComponent } from './components/view-artist/view-artist.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddEditArtistComponent,
+    ListArtistComponent,
+    ViewArtistComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
