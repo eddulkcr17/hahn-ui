@@ -1,6 +1,7 @@
 export interface Artist {
-  id: number;
+  id?: number;
   artistName: string;
   diskName: string;
   publication: string;
+
 }
