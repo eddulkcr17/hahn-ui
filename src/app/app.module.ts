@@ -13,9 +13,6 @@ import { ListArtistComponent } from './components/list-artist/list-artist.compon
 import { ViewArtistComponent } from './components/view-artist/view-artist.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,

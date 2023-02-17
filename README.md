@@ -31,11 +31,11 @@ Create the Artist Web API consuming UI that I created for the fullstack develope
 
 #### Structure
 the app will have the next structure:
-Components  
-      add-edit-artist
-      list-artist
-      view-artist
-Interfaces
-      artist
-Services
-      artist
+- Components  
+  - add-edit-artist
+  - list-artist
+  - view-artist
+- Interfaces
+  - artist
+- Services
+  - artist
