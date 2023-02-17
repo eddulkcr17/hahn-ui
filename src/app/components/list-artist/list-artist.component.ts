@@ -25,7 +25,7 @@ const listArtist: Artist[] = [
   styleUrls: ['./list-artist.component.css']
 })
 export class ListArtistComponent implements OnInit, AfterViewInit{
-  displayedColumns: string[] = ['artistName','diskName','publication'];
+  displayedColumns: string[] = ['artistName','diskName','publication','actions'];
   dataSource = new MatTableDataSource<Artist>(listArtist);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

@@ -4,19 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+//modules
+import { SharedModule } from './shared/shared.module';
+
 //components
 import { AddEditArtistComponent } from './components/add-edit-artist/add-edit-artist.component';
 import { ListArtistComponent } from './components/list-artist/list-artist.component';
 import { ViewArtistComponent } from './components/view-artist/view-artist.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-//Angular amterial
-import { MatSliderModule } from '@angular/material/slider';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+
+
 
 @NgModule({
   declarations: [
@@ -29,12 +27,8 @@ import { MatInputModule } from '@angular/material/input';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSliderModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatFormFieldModule,
-    MatInputModule,
+    SharedModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],
