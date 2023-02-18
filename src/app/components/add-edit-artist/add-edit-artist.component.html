@@ -7,14 +7,14 @@
     <mat-card-subtitle>
       Artist data
     </mat-card-subtitle>
-    <form>
+    <form [formGroup]="form" (ngSubmit)="addArtist()">
       <mat-grid-list cols="2" rowHeight="85px">
         <mat-grid-tile [colspan]="2">
           <mat-form-field appearance="outline">
             <mat-label>
               Name Artist
             </mat-label>
-            <input matInput autocomplete="off">
+            <input formControlName="artistName" matInput autocomplete="off">
           </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile>
@@ -22,7 +22,7 @@
             <mat-label>
               Name Disk
             </mat-label>
-            <input matInput autocomplete="off">
+            <input formControlName="diskName" matInput autocomplete="off">
           </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile>
@@ -30,11 +30,11 @@
             <mat-label>
               Publication
             </mat-label>
-            <input matInput autocomplete="off">
+            <input type="number" max="2023" min="1970" formControlName="publication" matInput autocomplete="off">
           </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile [colspan]="2">
-          <button class="btnAdd" mat-raised-button color="primary">Add</button>
+          <button [disabled]="form.invalid" type="submit" class="btnAdd" mat-raised-button color="primary">Add</button>
           <button mat-raised-button [routerLink]="['/listArtis']" routerLinkActive="router-link-active" >Volver</button>
 
         </mat-grid-tile>
