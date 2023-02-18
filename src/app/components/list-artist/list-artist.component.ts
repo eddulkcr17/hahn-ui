@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Artist } from 'src/app/interface/artist';
@@ -27,11 +28,12 @@ const listArtist: Artist[] = [
 export class ListArtistComponent implements OnInit, AfterViewInit{
   displayedColumns: string[] = ['artistName','diskName','publication','actions'];
   dataSource = new MatTableDataSource<Artist>(listArtist);
+  loading: boolean =false;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!:MatSort;
 
-  constructor(){}
+  constructor(private _snackBar: MatSnackBar){}
   ngOnInit(): void {
 
   }
@@ -43,6 +45,18 @@ export class ListArtistComponent implements OnInit, AfterViewInit{
   applyFilter(event: Event){
     const filterValue =(event.target as HTMLInputElement).value;
     this.dataSource.filter= filterValue.trim().toLocaleLowerCase();
+  }
+
+  deleteArtist(){
+    this.loading =true;
+    setTimeout(()=>{
+      this.loading =false;
+      this._snackBar.open('The artist was deleted','',{
+        duration: 4000,
+        horizontalPosition: 'right',
+      });
+    },3000)
+
   }
 
 }

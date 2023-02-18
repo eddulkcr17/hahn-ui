@@ -1,17 +1,9 @@
-.title{
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  color: white;
-}
-table{
+table {
   width: 100%;
 }
 
-.container{
-  margin: 0 20%;
-}
-td, th{
+td,
+th {
   width: 15%;
 }
 
@@ -19,20 +11,20 @@ td, th{
   font-size: 14px;
   width: 100%;
 }
-.delete{
+.delete {
   cursor: pointer;
   color: #e15639;
 }
 
-.edit{
+.edit {
   cursor: pointer;
   color: #1878b0;
 }
 
-.search{
+.search {
   cursor: pointer;
 }
-.add{
-font-size: 12px;
-line-height: 26px;
+.add {
+  font-size: 12px;
+  line-height: 26px;
 }
